@@ -5,11 +5,11 @@ EEG  Intention Recognition
 This project is going to classifiy 5-class EEG signals using  the EEG2Image based denoised-ConvNets model
 
 ### Environment
-keras
-tensorflow
-sklearn
-matplotlib
-numpy
+- keras
+- tensorflow
+- sklearn
+- matplotlib
+- numpy
 
 ### Dataset
 
