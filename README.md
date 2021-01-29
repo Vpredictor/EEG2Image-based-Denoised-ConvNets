@@ -18,12 +18,12 @@ Two public EEG datasets involved in this paper are EEGMMIDB and EMOTIV.
 ### EEGMMIDB
   - The EEGMMIDB data set has a total of 29,738 pieces of data, each data is an EEG image with 32 pixels * 32 pixels * 3 channels.
   - These images can be divided into five categories. 0: Keep eyes closed; 1: Open and close both feet; 2: Open and close both fists; 3: Open and close left fist; 4: Open and close right fist.
-  - The training data is stored in a Numpy-specific binary format npy file called data.npy, and the corresponding label is saved in another npy file called label.npy
+  - The training data is stored in a Numpy-specific binary format npy file, Part of the training data is saved in the data.npy, which contains 5948 pieces of data, and the corresponding label is saved in another npy file called label.npy. 
 
  ### EMOTIV
   - The EEGMMIDB data set has a total of 5266 pieces of data, each data is an EEG image with 32 pixels * 32 pixels * 3 channels.
   - These images can be divided into five categories. 0: Confirm; 1: Up; 2: Down; 3: Left; 4: Right.
-  - The training data is stored in a Numpy-specific binary format npy file called X_5000.npy, and the corresponding label is saved in another npy file called y_5000.npy
+  - The training data is stored in a Numpy-specific binary format npy file, Part of the training data is saved in the X_5000.npy, which contains 1054 pieces of data, and the corresponding label is saved in another npy file called y_5000.npy.
 
 ### Training 
 Train EEGMMIDB: you need stn_train.py, eegmmidb_conv_model.py, spatial_transformer.py and run stn_train.py.
