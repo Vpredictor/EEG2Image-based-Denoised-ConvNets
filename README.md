@@ -1,5 +1,5 @@
-# Exploring-BCI-Control-in-Smart-Environment
-EEG  Intention Recognition
+# Exploring BCI Control in Smart Environments: Intention Recognition via EEG Representation Enhancement Learning
+
 
 ### Overview
 This project is going to classifiy 5-class EEG signals using  the EEG2Image based denoised-ConvNets model
