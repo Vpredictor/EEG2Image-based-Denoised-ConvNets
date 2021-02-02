@@ -13,7 +13,7 @@ This project is going to classifiy 5-class EEG signals using  the EEG2Image base
 
 ### Dataset
 
-Two public EEG datasets involved in this paper are EEGMMIDB and EMOTIV.
+Two public EEG datasets involved in this paper are EEGMMIDB and EMOTIV. 
 
 ### EEGMMIDB
   - The EEGMMIDB data set has a total of 29,738 pieces of data, each data is an EEG image with 32 pixels * 32 pixels * 3 channels.
