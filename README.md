@@ -2,14 +2,16 @@
 
 
 ### Overview
-This project is going to classifiy 5-class EEG signals using  the EEG2Image based denoised-ConvNets model
+This project is going to classifiy 5-class EEG signals using the EEG2Image based denoised-ConvNets model capable of learning color and spatial variations of image objects converted from EEG signals. 
 
 ### Environment
-- keras
-- tensorflow
-- sklearn
-- matplotlib
-- numpy
+- keras == 2.2.4
+- tensorflow-gpu == 1.12.0
+- scipy == 1.2.1
+- matplotlib == 3.2.2
+- numpy == 1.19.0
+- pandas == 1.1.5
+- scikit-learn == 0.23.1
 
 ### Dataset
 
@@ -33,6 +35,14 @@ Train EEGMMIDB: you need stn_train.py, eegmmidb_conv_model.py, spatial_transform
 -Train EMOTIV: you need stn_train.py, emotiv_conv_model.py,  spatial_transformer.py and run stn_train.py.
 - Input: X_5000.npy, y_5000.npy
 - Output: Training, Testing result and report
+
+
+### Reference
+- Pouya Bashivan, Irina Rish, Mohammed Yeasin, and Noel Codella. 2015. Learning representations from EEG with deeprecurrent-convolutional neural networks.arXiv preprint arXiv:1511.06448(2015)
+- Max Jaderberg, Karen Simonyan, Andrew Zisserman, et al.2015. Spatial transformer networks. InAdvances in neuralinformation processing systems. 2017–20
+- D Mishkin, N Sergievskiy, and J Matas. 2016. Systematic evaluation of CNN advances on the ImageNet. arXiv 1606:02228 [cs].arXiv preprint arXiv:1606.02228(2016)
+- https://github.com/skaae/transformer_network/blob/master/transformerlayer.py
+- https://github.com/hello2all/GTSRB_Keras_STN
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 

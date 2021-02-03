@@ -28,6 +28,8 @@ from keras.utils import np_utils
 class SpatialTransformer(Layer):
 
     """Spatial Transformer Layer
+	
+	Borrowed from [2,3]_:
 
     downsample_fator : float
 
@@ -47,11 +49,15 @@ class SpatialTransformer(Layer):
 
     ----------
 
-    .. [1]  Spatial Transformer Networks
+    ..  [1]  Spatial Transformer Networks
 
-            Max Jaderberg, Karen Simonyan, Andrew Zisserman, Koray Kavukcuoglu
+             Max Jaderberg, Karen Simonyan, Andrew Zisserman, Koray Kavukcuoglu
 
-            Submitted on 5 Jun 2015
+             Submitted on 5 Jun 2015
+			 
+	    [2]  https://github.com/skaae/transformer_network/blob/master/transformerlayer.py
+		
+		[3]  https://github.com/hello2all/GTSRB_Keras_STN
 
     """
 
