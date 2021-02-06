@@ -286,7 +286,7 @@ plt.savefig('./roc.eps', format='eps', dpi=1000)
 plt.figure(4)
 lw = 0.5
 plt.plot(fpr["macro"], tpr["macro"],
-         label='macro-average ROC curve)'
+         label='macro-average ROC curve'
                ''.format(roc_auc["macro"]),
          color='navy',lw=lw)
 
@@ -301,7 +301,7 @@ plt.xlim(0,0.1)
 plt.ylim(0.9, 1.0)
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-plt.title(' Receiver operating characteristic')
+plt.title(' Receiver operating characteristic to multi-class')
 plt.legend(loc="lower right")
 plt.savefig('./roc3.eps', format='eps', dpi=1000)
 
