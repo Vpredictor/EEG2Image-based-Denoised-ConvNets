@@ -8,7 +8,8 @@ from keras.layers.normalization import BatchNormalization
 from keras.models import Sequential, model_from_json
 from keras.regularizers import l2
 from keras.utils import np_utils
-from spatial_transformer import SpatialTransformer
+from spatial_transformer import *
+
 
 def locnet():
     b = np.zeros((2, 3), dtype='float32')
@@ -34,10 +35,11 @@ def locnet():
 
     return locnet
 
+
 def conv_model(input_shape=(32, 32, 3)):
     model = Sequential()
     model.add(Lambda(
-        lambda x: x/127.5 - 1.,
+        lambda x: x / 127.5 - 1.,
         input_shape=(32, 32, 3),
         output_shape=(32, 32, 3)))
     model.add(BatchNormalization())
@@ -72,8 +74,5 @@ def conv_model(input_shape=(32, 32, 3)):
     model.add(Flatten())
     model.add(Dropout(0.6))
     model.add(Dense(5, activation="softmax"))
-    model.summary()
+    # model.summary()
     return model
-
-
-

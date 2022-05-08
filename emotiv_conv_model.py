@@ -10,6 +10,7 @@ from keras.regularizers import l2
 from keras.utils import np_utils
 from spatial_transformer import SpatialTransformer
 
+
 def locnet():
     b = np.zeros((2, 3), dtype='float32')
     b[0, 0] = 1
@@ -34,10 +35,11 @@ def locnet():
 
     return locnet
 
+
 def conv_model(input_shape=(32, 32, 3)):
     model = Sequential()
     model.add(Lambda(
-        lambda x: x/127.5 - 1.,
+        lambda x: x / 127.5 - 1.,
         input_shape=(32, 32, 3),
         output_shape=(32, 32, 3)))
     model.add(BatchNormalization())
@@ -52,15 +54,15 @@ def conv_model(input_shape=(32, 32, 3)):
     # model.add(Conv2D(64,( 3, 3), strides=1, padding='same', data_format='channels_first',input_shape=(3, 32, 32)))
     # model.add(BatchNormalization())
     # model.add(Activation('relu'))
-    model.add(Conv2D(32, ( 3, 3),kernel_regularizer=l2(0.05)))
+    model.add(Conv2D(32, (3, 3), kernel_regularizer=l2(0.05)))
     model.add(BatchNormalization())
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.25))
-    model.add(Conv2D(64,( 3, 3), padding='valid',kernel_regularizer=l2(0.05)))
+    model.add(Conv2D(64, (3, 3), padding='valid', kernel_regularizer=l2(0.05)))
     model.add(BatchNormalization())
     model.add(Activation('relu'))
-    model.add(Conv2D(64, ( 3, 3),kernel_regularizer=l2(0.05)))
+    model.add(Conv2D(64, (3, 3), kernel_regularizer=l2(0.05)))
     model.add(BatchNormalization())
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -69,6 +71,3 @@ def conv_model(input_shape=(32, 32, 3)):
     model.add(Dense(5, activation="softmax"))
     model.summary()
     return model
-
-
-
